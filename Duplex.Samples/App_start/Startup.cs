@@ -16,8 +16,8 @@ namespace Duplex
     {
         public static void Start()
         {
-            MEF.Instance.Configure();
-            MEF.Instance.Resolve<TestViewModel>();
+            //MEF.Instance.Configure();
+            //MEF.Instance.Resolve<TestViewModel>();
             RouteTable.Routes.MapConnection<TestViewModel>("test", "test/{*operation}");
         }
     }

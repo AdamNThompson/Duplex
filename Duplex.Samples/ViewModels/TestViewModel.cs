@@ -2,6 +2,7 @@
 using System.Globalization;
 using Duplex.MVVM;
 using System;
+using System.Reactive.Subjects;
 
 namespace Duplex.Samples.ViewModels
 {
@@ -16,6 +17,7 @@ namespace Duplex.Samples.ViewModels
         public virtual void UpdateDateTime()
         {
             CurrentDateTime = DateTime.Now.ToString(CultureInfo.InvariantCulture);
+            OutStreamAsync.OnNext(CurrentDateTime);
         }
     }
 }
