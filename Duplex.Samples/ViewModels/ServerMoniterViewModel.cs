@@ -1,11 +1,13 @@
-﻿namespace Duplex.Samples.ViewModels
+﻿using Duplex.MVVM;
+
+namespace Duplex.Samples.ViewModels
 {
     public class ServerMoniterViewModel : ViewModel
     {
-        [NotifyAsync]
+        [ObservableProperty]
         public int CpuUsage { get; set; }
 
-        [ProcessAsync(IntervalMilSec=1000)]
+        [AsyncWorker(IntervalMilSec=1000)]
         public void MoniterCpuUtilization()
         {
             
