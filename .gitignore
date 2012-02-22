@@ -1,0 +1,15 @@
+
+# Visual Studio
+#################
+.nuget/
+[Rr]elease/
+[Dd]ebug/
+*.sln.cache
+*.suo
+*.csproj.user
+
+# Resharper
+#############
+*resharper.user
+*[Rr]e[Ss]harper.user
+_ReSharper.*/
