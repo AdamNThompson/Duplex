@@ -22,10 +22,27 @@
     });
 
     connection.start();
+
+    $('#btnDisplayMsg').click(function () {
+        var msg = $('#txtMsg').val();
+        connection.send(msg);
+        $('#txtMsg').val('');
+    });
+
+    
   });
 </script>
 
 <h2>Test Connection</h2>
 
 <div data-bind="html: dateTime"></div>
+
+<br />
+
+<div>
+    <input type="text" id="txtMsg" />
+    <input type="button" id="btnDisplayMsg" value="Display Message" />
+</div>
+
+
 

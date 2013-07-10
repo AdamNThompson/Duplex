@@ -56,7 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\MEF.cs" />
+    <Compile Include="Infrastructure\Container.cs" />
+    <Compile Include="MVVM\CommandAspect.cs" />
+    <Compile Include="MVVM\CommandAttribute.cs" />
+    <Compile Include="MVVM\CommandInterceptor.cs" />
     <Compile Include="MVVM\ObservablePropertyAspect.cs" />
     <Compile Include="MVVM\ObservablePropertyAttribute.cs" />
     <Compile Include="MVVM\ObservablePropertyInterceptor.cs" />

@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duplex", "Duplex\Duplex.csproj", "{094C00B5-8A57-422A-99CF-BACBE397C631}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duplex.Samples", "Duplex.Samples\Duplex.Samples.csproj", "{DBC0E4C5-EEB3-4EDC-981C-B5A873B344BF}"

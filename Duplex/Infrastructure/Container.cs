@@ -6,18 +6,19 @@ using System.Reflection;
 
 namespace Duplex.Infrastructure
 {
-    public class MEF
+    // fuckin magic happen here
+    public class Container
     {
 
         private CompositionContainer _container;
-        private static readonly Lazy<MEF> instance = new Lazy<MEF>(() => new MEF());
+        private static readonly Lazy<Container> instance = new Lazy<Container>(() => new Container());
 
-        private MEF()
+        private Container()
         {
 
         }
 
-        public static MEF Instance
+        public static Container Instance
         {
             get
             {

@@ -1,13 +1,9 @@
-﻿using System.ComponentModel.Composition;
-using System.Globalization;
-using Duplex.MVVM;
+﻿using Duplex.MVVM;
 using System;
-using System.Reactive.Subjects;
+using System.Globalization;
 
 namespace Duplex.Samples.ViewModels
 {
-    [PartCreationPolicy(CreationPolicy.NonShared)]
-    [Export]
     public class TestViewModel : ViewModel
     {
         [ObservableProperty]

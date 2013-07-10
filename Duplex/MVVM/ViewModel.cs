@@ -14,23 +14,33 @@ using System.Linq;
 
 namespace Duplex.MVVM
 {
+    [Export]
     [Aspect(typeof(ViewModel))]
     public abstract class ViewModel : PersistentConnection, INotifyPropertyChanged
     {
+
+        // Subject's representing in and outbound data streams
         public ISubject<string> InStreamAsync { get; set; }
         public ISubject<string> OutStreamAsync { get; set; }
         public ISubject<Exception> ExceptionsAsync { get; set; }
+
+        // Processing interval of Async workers
         public int ProcessIntervalMilSec { get; set; }
+
+        // collection of workers stored in observable collection
         private readonly IObservable<MethodInfo> _workers;
 
         protected ViewModel()
         {
+            // Need dependency injection
             InStreamAsync = new Subject<string>();
             OutStreamAsync = new Subject<string>();
             ExceptionsAsync = new Subject<Exception>();
 
             OutStreamAsync.Subscribe(SendAsync);
-            ExceptionsAsync.Subscribe(HandleException);
+            // this does not match the signiture.... may need to create some kind of proxy or fisade...
+            //InStreamAsync.Subscribe(OnReceivedAsync);
+            ExceptionsAsync.Subscribe(HandleException); // need to implement
 
             ProcessIntervalMilSec = 1000;
 
